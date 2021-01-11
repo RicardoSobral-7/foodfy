@@ -1,0 +1,30 @@
+main .search{
+    width: 950px;
+    margin: 52px auto 20px auto;
+}
+
+.container .receitas{
+    width: 950px;
+}
+.container .receitas .cards{
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+.container .receitas .cards .card img{
+    width: 300px;
+    height: 140px;
+    border-radius: 15px;
+}
+.container .receitas .cards .card p{
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 28px;
+}
+.container .receitas .cards .card span{
+    margin-top: 5px;
+    font-size: 14px;
+    color: #777777;
+}

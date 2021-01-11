@@ -1,0 +1,24 @@
+{% extends "admin/layoutAdmin.njk" %}
+
+{% block styles %}
+<link rel="stylesheet" href="/styles/admin/recipes.css">
+{% endblock styles %}
+
+{% block main %}
+    <h3>Gerenciar Receitas</h3>
+    <div class="recipes">
+    {% for recipe in recipes %}
+        <div class="recipe">
+            <div style="background: url({{recipe.image}}) center center / cover"></div>
+            <div>
+                <span>{{recipe.title}}</span>
+                <span>{{recipe.chef_name}}</span>
+                <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+    <div class="createBtn">
+        <a id="create" href="/admin/recipes/create"></a>
+    </div>
+{% endblock main %}

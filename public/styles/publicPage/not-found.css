@@ -1,0 +1,16 @@
+main .not-found{
+    margin: 10vh auto 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fbdfdb;
+    padding: 10px;
+    border-radius:16px;
+    height: 64.5vh;
+}
+
+main .not-found h1{
+    margin-bottom: 3vh;
+
+}

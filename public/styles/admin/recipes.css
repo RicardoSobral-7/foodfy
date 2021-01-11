@@ -1,0 +1,47 @@
+main .recipes{
+    margin: 0 auto;
+    width: 940px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    grid-gap: 40px;
+}
+
+main .recipes .recipe{
+    display: flex;
+}
+
+main .recipes .recipe div:first-child{
+    width: 200px;
+    height: 80px;
+    border-radius:12px ;
+}
+
+main .recipes .recipe div:last-child{
+    width: max-content;
+    margin-left: 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+main .recipes .recipe div:last-child span:first-child{
+    font-size: 18px;
+}
+
+main .recipes .recipe div:last-child span,
+main .recipes .recipe div:last-child a{
+    margin: 0;
+}
+
+main .recipes .recipe div:last-child span:nth-child(2),
+main .recipes .recipe div:last-child a{
+    font-size: 14px;
+}
+
+main .recipes .recipe div:last-child span:nth-child(2){
+    color: #777777;
+}
+
+main .recipes .recipe div:last-child a{
+    color: #6558C3;
+    font-weight: bold;
+}

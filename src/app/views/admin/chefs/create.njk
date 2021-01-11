@@ -1,0 +1,15 @@
+{% extends "admin/layoutAdmin.njk" %}
+{% block styles %}
+<link rel="stylesheet" href="/styles/admin/fields.css">
+{% endblock styles %}
+
+
+{% block main %}
+<form  action="/admin/chefs" method="post">
+    <div class="header">
+        <h3>Criando Chef</h3>
+        <button type="submit">Salvar</button>
+    </div>
+    {% include "admin/chefs/fields.njk"%}
+</form>
+{% endblock main %}

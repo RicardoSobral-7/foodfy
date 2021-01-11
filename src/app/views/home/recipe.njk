@@ -1,0 +1,52 @@
+{% extends "layout.njk" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/publicPage/recipe.css">
+{% endblock styles %}
+
+{% block main %}
+<div class="singleRecipe">
+    <div class="imageRecipe">
+        <img src="{{recipes.image}}" alt="imagem de {{recipes.title}}">
+    </div>
+    <div class="titleRecipe">
+        <h1>{{recipes.title}}</h1>
+        <p>{{recipes.chefs_name}}</p>
+          
+    </div>
+    <div class="ingredientsRecipe">
+        <h4>Ingredientes</h4>
+        <button>Mostrar</button>
+        <div class="i-content hide">
+            <ul>
+                {% for ingredients in recipes.ingredients %}
+                    <li class="">{{ingredients}}</li>
+                {% endfor %}
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="preparationRecipe">
+        <h4>Modo de preparo</h4>
+        <button>Mostrar</button>
+        <div class="p-content hide">
+            {% for preparation in recipes.preparation %}
+            <p class="">{{preparation}}</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="informationRecipe">
+        <h4>Informações adicionais</h4>
+        <button>Mostrar</button>
+        <div class="info-content hide">
+            <p class="">{{recipes.information}}</p>
+        </div>
+    </div>
+</div>
+{% endblock main %}
+
+{% block scripts %}
+<script src="/scripts/recipeFunction.js"></script>
+{% endblock scripts %}

@@ -1,0 +1,139 @@
+.chefs{
+    width: 940px;
+    margin: 65px auto 0 auto;
+    display: grid;
+    grid-template: 1fr 1fr /1fr 1fr 1fr 1fr; 
+    align-items: center;
+    justify-content: center;   
+}
+
+.chef{
+    display: flex;
+}
+
+.chef div:first-child{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.chef div:nth-child(2){
+    display: grid;
+    grid-template-rows: 18px 16px;
+    gap:10px ;
+    margin-top:10px;
+}
+
+.chef div:nth-child(2) span{
+    font-size: 18px;
+}
+
+.chef div:nth-child(2) a{
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* show */
+.singleChef .header{
+    margin: 0 auto;
+    width: 920px;
+    display: grid;
+    grid-template: 1fr/ 1fr 120px;
+    justify-content: center;
+    align-items: center;
+}
+
+.singleChef .header a{
+    background: var(--primary-color);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    padding:10px;
+    border-radius: 4px;
+}
+
+.singleChef .header a:hover{
+    transition: box-shadow 500ms ease, transform 500ms ease;
+    transform: translateY(-4px);
+    box-shadow: 0px 8px 6px 2px rgba(0, 0, 0, 0.3);
+}
+
+.singleChef .imageChef{
+    width: 200px;
+    height: 200px;
+    margin: 51px auto 30px auto;
+}
+
+.singleChef .imageChef img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.singleChef .titleChef{
+    width: 940px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.singleChef .titleChef h1{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.singleChef .titleChef p{
+    font-size: 20px;
+    color: #777;
+}
+.singleChef h3{
+    width: 940px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.singleChef .recipes{
+    width: 940px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    display: grid;
+    gap: 10px;
+    grid-template: 1fr 1fr / 1fr 1fr;
+}
+
+.singleChef .recipes .recipe{
+    display: flex;
+    align-content: center;
+}
+
+
+.singleChef .recipes .recipe div:first-child{
+    width: 175px;
+    height: 80px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.singleChef .recipes .recipe div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+}
+.singleChef .recipes .recipe div:nth-child(2) span{
+    font-size: 14px;
+    color: #777;
+}
+
+.singleChef .recipes .recipe div:nth-child(2) span:first-child{
+    font-size: 18px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.singleChef .recipes .recipe div:nth-child(2) a{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--primary-color);
+}

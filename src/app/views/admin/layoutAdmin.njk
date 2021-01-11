@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Foodfy</title>
+    {% endblock title %}
+    {% block styles %}
+    {% endblock styles %}
+    <link rel="stylesheet" href="/styles/admin/homeAdmin.css">
+    
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <a class="food" href="/admin/recipes">
+                <div id="foodfy"></div>
+            </a>
+
+            <div class="menu">
+                    <a href="/admin/recipes">Receitas</a>
+                    <a href="/admin/chefs">Chefs</a>
+            </div>
+        </nav>
+    </div>
+    <main>
+        {% block main %}
+        {% endblock main %}
+    </main>
+
+
+    {% block scripts %}
+    {% endblock scripts %}
+    <script src="/scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+.container .receitas{
+    margin-top: 50px;
+    width: 955px;
+}
+.container .receitas .cards{
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+.container .receitas .cards .card img{
+    width: 300px;
+    height: 140px;
+    border-radius: 15px;
+}
+.container .receitas .cards .card p{
+    font-size: 18px;
+    line-height: 28px;
+}
+.container .receitas .cards .card span{
+    font-size: 14px;
+    color: #777777;
+}

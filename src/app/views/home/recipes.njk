@@ -1,0 +1,27 @@
+{% extends "layout.njk" %}
+
+{% block title %}
+<title>Receitas - Foodfy</title>
+{% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" href="/styles/publicPage/recipes.css">
+{% endblock styles %}
+
+{% block main %}
+<div class="receitas">
+    <div class="cards">
+        {% for recipe in recipes %}
+        <div class="card" id="{{recipe.id}}">
+            <img src="{{recipe.image}}" alt="Imagem de {{recipe.title}}">
+            <p>{{recipe.title}}</p>
+            <span>{{recipe.chefs_name}}</span>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock main %}
+
+{% block scripts %}
+<script src="/scripts/recipeRoute.js"></script>
+{% endblock scripts %}

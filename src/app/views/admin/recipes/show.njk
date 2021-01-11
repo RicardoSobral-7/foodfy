@@ -1,0 +1,52 @@
+{% extends "admin/layoutAdmin.njk" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/publicPage/recipe.css">
+{% endblock styles %}
+
+{% block main %}
+<div class="singleRecipe">
+    <a href="/admin/recipes/{{recipe.id}}/edit">Editar receita</a>
+    <div class="imageRecipe">
+        <img src="{{recipe.image}}" alt="imagem de {{recipe.title}}">
+    </div>
+    <div class="titleRecipe">
+        <h1>{{recipe.title}}</h1>
+        <p>{{recipe.chef_name}}</p>
+          
+    </div>
+    <div class="ingredientsRecipe">
+        <h4>Ingredientes</h4>
+        <button>Mostrar</button>
+        <div class="i-content hide">
+            <ul>
+                {% for ingredient in recipe.ingredients %}
+                    <li>{{ingredient}}</li>
+                {% endfor %} 
+            </ul>
+        </div>
+    </div>
+
+    <div class="preparationRecipe">
+        <h4>Modo de preparo</h4>
+        <button>Mostrar</button>
+        <div class="p-content hide">
+            {% for preparation in recipe.preparation %}
+            <p>{{preparation}}</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="informationRecipe">
+        <h4>Informações adicionais</h4>
+        <button>Mostrar</button>
+        <div class="info-content hide">
+            <p class="">{{recipe.information}}</p>
+        </div>
+    </div>
+</div>
+{% endblock main %}
+
+{% block scripts %}
+<script src="/scripts/recipeFunction.js"></script>
+{% endblock scripts %}

@@ -1,0 +1,63 @@
+body .modal-overlay{
+    position: fixed;
+    width: 100%;
+    height: 95%;
+    top: 3vh;
+    background-color:rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+
+.modal-overlay .modal{
+    background-color:white;
+    position: relative;
+    width:650px;
+    height: 415px;
+    margin: 20vh auto;
+    border-radius: 15px;
+    
+}
+
+.modal-overlay .modal .modal-close{
+    position: absolute;
+    font-size: 16px;
+    color: #999999;
+    bottom: 20px;
+    right: 46%;
+    cursor: pointer;
+}
+
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.modal-overlay .modal .modal-content .card{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal-overlay .modal .modal-content .card img{
+    margin-top:30px ;
+    border-radius: 15px;
+    width: 600px;
+    height: 200px;
+    
+}
+.modal-overlay .modal .modal-content .card p{
+    margin-top:20px ;
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+}
+.modal-overlay .modal .modal-content .card span{
+    margin-top: 5px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #777777;
+    text-align: center;
+}

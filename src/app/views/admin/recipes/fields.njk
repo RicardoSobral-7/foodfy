@@ -1,0 +1,49 @@
+<div class="items">
+    <div class="item">Imagem da receita
+        <input type="text" name="image" value="{{recipe.image}}">
+    </div>
+    <div class="item">Nome da receita
+        <input type="text" name="title" value="{{recipe.title}}">
+    </div>
+     <div class="item">Nome do autor
+        <div>
+            <select name="chef_id">
+                {% for chef in chefsOptions %}
+                <option value="{{chef.id}}" {% if recipe.chef_id == chef.id %}
+                selected
+                {% endif %}>{{chef.name}}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+    <div class="item" id="ingredients">Ingredientes
+        {% for ingredient in recipe.ingredients %}
+        <div class="ingredient">
+            <input type="text" name="ingredients[]" value="{{ingredient}}" placeholder="Ingredientes">
+        </div>
+        {% else %}
+        <div class="ingredient">
+            <input type="text" name="ingredients[]" value="" placeholder="Ingredientes">
+        </div>
+        {% endfor %}
+    </div>
+        <button  type="button" class="add-ingredient" >Adicionar novo ingrediente</button>
+    <div class="item" id="preparations">Modo de preparo
+        {% for preparation in recipe.preparation %}
+        <div class="preparation">
+            <input type="text" name="preparation[]" value="{{preparation}}" placeholder="Preparações">
+        </div>
+        {% else %}
+        <div class="preparation">
+            <input type="text" name="preparation[]" value="" placeholder="Preparações">
+        </div>
+        {% endfor %}
+    </div>
+        <button  type="button" class="add-preparation" >Adicionar novo passo</button>
+    <div class="item">Informações adicionais
+        <textarea name="information" cols="30" rows="10" value="">
+            {{recipe.information}}
+        </textarea>
+    </div>
+</div>
+<script src="/scripts/addFunction.js"></script>

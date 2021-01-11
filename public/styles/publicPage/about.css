@@ -1,0 +1,16 @@
+.container main h2:first-of-type{
+    margin: 50px auto 20px auto ;
+    font-size: 24px;
+    width: 955px; 
+}
+.container main h2{
+    font-size: 20px;
+    width: 955px;
+    margin: 30px auto 20px auto;
+}
+.container main p{
+    width: 955px;
+}
+footer{
+    margin-top:110px;
+}
