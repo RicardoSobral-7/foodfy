@@ -8,6 +8,7 @@ To download this project you will need to install some things like:
 
 ## How to launch
 To start the project you will need to write this following line in the terminal
+* *npm install*
 * *npm start*
 the project will be at door 3000, so open the browser and write 
 * **http://localhost:3000/**
